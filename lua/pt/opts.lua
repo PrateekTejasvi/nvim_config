@@ -4,7 +4,6 @@ local cmd = vim.cmd
 vim.g.mapleader=" "
 opt.shortmess:append "sI"
 opt.syntax="on"
-
 opt.relativenumber=true
 opt.number=true
 opt.expandtab=true
@@ -33,6 +32,7 @@ opt.completeopt={"menuone","noselect"}
 opt.splitright=true
 opt.wrap=false
 opt.shell='fish'
+opt.signcolumn="yes"
 
 cmd [[ 
     set clipboard+=unnamedplus
