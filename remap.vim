@@ -12,6 +12,7 @@ nnoremap <leader>e :lua require'telescope'.extensions.file_browser.file_browser(
 nnoremap <leader>th :lua require('nvterm.terminal').toggle "horizontal" <CR>
 nnoremap <leader>tv :lua require('nvterm.terminal').toggle "vertical"<CR>
 nnoremap <leader>tf :lua require('nvterm.terminal').toggle "float"<CR>
+nnoremap <C-w> :bdelete<CR>
 nnoremap <leader>h :wincmd h <CR>
 nnoremap <leader>j :wincmd j <CR>
 nnoremap <leader>k :wincmd k <CR>

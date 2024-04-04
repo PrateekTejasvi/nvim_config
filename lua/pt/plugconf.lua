@@ -18,7 +18,6 @@ Plug 'folke/lsp-colors.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/bufferline.nvim'
 Plug 'joshdick/onedark.vim'
-Plug 'tiagovla/tokyodark.nvim'
 
 --Formating
 
