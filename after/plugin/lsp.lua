@@ -14,7 +14,6 @@ require('mason-lspconfig').setup({
 vim.g.lsp_zero_extend_lspconfig=0
 
 
-
 local lspconfig = require('lspconfig')
 
 lspconfig.tsserver.setup{
@@ -25,5 +24,17 @@ lspconfig.tsserver.setup{
     }
 
 }
+local MY_FQBN = "arduino:avr:nano:cpu=atmega328old"
+lspconfig.arduino_language_server.setup {
+    cmd = {
+        "arduino-language-server",
+        "-cli-config", "~/.arduino15/arduino-cli.yaml",
+        "-fqbn",
+        MY_FQBN
+    }
+}
+
+
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float)
+vim.keymap.set('n', '<leader>bf', vim.lsp.buf.hover , {buffer=arg.buf})
 

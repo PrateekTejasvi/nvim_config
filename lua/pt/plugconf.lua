@@ -18,6 +18,7 @@ Plug 'folke/lsp-colors.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/bufferline.nvim'
 Plug 'joshdick/onedark.vim'
+Plug 'catppuccin/nvim'
 
 --Formating
 
@@ -52,5 +53,15 @@ Plug "sbdchd/neoformat"
 
 vim.call('plug#end')
 vim.cmd[[
- colorscheme onedark
+ colorscheme catppuccin-macchiato
+
 ]]
+
+
+
+
+--Trouble,nvim setup-- 
+require('trouble').setup{
+    mode = "document_diagnostics",
+    auto_open = true
+}
