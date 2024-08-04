@@ -10,9 +10,9 @@ nnoremap <leader>fi :lua require('config_telescope').search_word()<CR>
 nnoremap <leader>sp :lua require('config_telescope').search_projects()<CR>
 nnoremap <leader>e :lua require'telescope'.extensions.file_browser.file_browser()<CR>
 nnoremap <leader>t :TroubleToggle<CR>
-nnoremap <leader>th :lua require('nvterm.terminal').toggle "horizontal" <CR>
-nnoremap <leader>tv :lua require('nvterm.terminal').toggle "vertical"<CR>
-nnoremap <leader>ft :lua require('nvterm.terminal').toggle "float"<CR>
+nnoremap <leader>th :ToggleTerm direction=horizontal size=8 <CR>
+nnoremap <leader>tv :ToggleTerm direction=vertical size=40<CR>
+nnoremap <leader>ft :ToggleTerm direction=float size=5<CR>
 nnoremap <C-w> :bdelete<CR>
 nnoremap <leader>h :wincmd h <CR>
 nnoremap <leader>j :wincmd j <CR>

@@ -8,16 +8,17 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-treesitter/playground'
 Plug ('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 --Terminal
-Plug "NvChad/nvterm"
+Plug "akinsho/toggleterm.nvim"
 
 --Themes
 
 Plug ('folke/tokyonight.nvim', {[ 'branch']= 'main' })
-Plug 'kyazdani42/nvim-web-devicons'
+-- Plug 'kyazdani42/nvim-web-devicons'
+Plug 'nvim-tree/nvim-web-devicons'
 Plug 'folke/lsp-colors.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/bufferline.nvim'
-Plug 'joshdick/onedark.vim'
+Plug 'navarasu/onedark.nvim'
 Plug 'catppuccin/nvim'
 
 --Formating
@@ -25,6 +26,7 @@ Plug 'catppuccin/nvim'
 Plug 'numToStr/Comment.nvim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'windwp/nvim-ts-autotag'
 
 --File Navigation
 Plug ('nvim-telescope/telescope.nvim', { ['tag'] = '0.1.4' })
@@ -53,7 +55,7 @@ Plug "sbdchd/neoformat"
 
 vim.call('plug#end')
 vim.cmd[[
- colorscheme catppuccin-macchiato
+ colorscheme onedark
 
 ]]
 
@@ -63,5 +65,45 @@ vim.cmd[[
 --Trouble,nvim setup-- 
 require('trouble').setup{
     mode = "document_diagnostics",
-    auto_open = true
+}
+
+require('onedark').setup{
+    style="darker"
+}require('onedark').load()
+
+
+require'nvim-web-devicons'.setup {
+ override = {
+  zsh = {
+    icon = "",
+    color = "#428850",
+    cterm_color = "65",
+    name = "Zsh"
+  }
+ };
+ color_icons = true;
+ default = true;
+ strict = true;
+ override_by_filename = {
+  [".gitignore"] = {
+    icon = "",
+    color = "#f1502f",
+    name = "Gitignore"
+  }
+ };
+ override_by_extension = {
+  ["log"] = {
+    icon = "",
+    color = "#81e043",
+    name = "Log"
+  }
+ };
+ override_by_operating_system = {
+  ["apple"] = {
+    icon = "",
+    color = "#A2AAAD",
+    cterm_color = "248",
+    name = "Apple",
+  },
+ };
 }

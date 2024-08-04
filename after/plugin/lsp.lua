@@ -24,7 +24,7 @@ lspconfig.tsserver.setup{
     }
 
 }
-local MY_FQBN = "arduino:avr:nano:cpu=atmega328old"
+local MY_FQBN = "esp32:esp32:esp32"
 lspconfig.arduino_language_server.setup {
     cmd = {
         "arduino-language-server",
