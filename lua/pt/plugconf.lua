@@ -12,6 +12,7 @@ Plug "akinsho/toggleterm.nvim"
 
 --Themes
 
+
 Plug ('folke/tokyonight.nvim', {[ 'branch']= 'main' })
 -- Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-tree/nvim-web-devicons'
@@ -20,6 +21,8 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/bufferline.nvim'
 Plug 'navarasu/onedark.nvim'
 Plug 'catppuccin/nvim'
+Plug 'loctvl842/monokai-pro.nvim'
+
 
 --Formating
 
@@ -54,8 +57,8 @@ Plug "sbdchd/neoformat"
 
 
 vim.call('plug#end')
-vim.cmd[[
- colorscheme tokyonight
+vim.cmd[[ 
+    colorscheme tokyonight
 
 ]]
 

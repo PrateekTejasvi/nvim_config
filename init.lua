@@ -9,10 +9,6 @@ let g:netrw_lifestyle=3
 source ~/.config/nvim/after/plugin/config_telescope.lua
 autocmd BufWritePre *.js Neoformat
 autocmd BufWritePre *.lua Neoformat
-highlight Normal guibg=none
-highlight NonText guibg=none
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
 ]]
 
 

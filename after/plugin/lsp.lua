@@ -3,6 +3,18 @@ lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
+require("mason-lspconfig").setup_handlers({
+function(server_name) -- default handler (optional)
+    if server_name == "tsserver" then
+        server_name = "ts_ls"
+    end
+    local capabilities = require("cmp_nvim_lsp").default_capabilities()
+    require("lspconfig")[server_name].setup({
+    capabilities = capabilities,
+})
+end,
+})
+
 require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {},
@@ -16,15 +28,7 @@ vim.g.lsp_zero_extend_lspconfig=0
 
 local lspconfig = require('lspconfig')
 
-lspconfig.tsserver.setup{
-    init_options = {
-        prefreneces = {
-            disableSuggestions=true
-        }
-    }
-
-}
-local MY_FQBN = "esp32:esp32:esp32"
+local MY_FQBN = "arduino:avr:nano:cpu=atmega328old"
 lspconfig.arduino_language_server.setup {
     cmd = {
         "arduino-language-server",
