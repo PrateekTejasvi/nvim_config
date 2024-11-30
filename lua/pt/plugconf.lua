@@ -58,7 +58,7 @@ Plug "sbdchd/neoformat"
 
 vim.call('plug#end')
 vim.cmd[[ 
-    colorscheme tokyonight
+    colorscheme catppuccin-mocha
 
 ]]
 
