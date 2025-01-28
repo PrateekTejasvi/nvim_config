@@ -40,5 +40,10 @@ lspconfig.arduino_language_server.setup {
 
 
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float)
-vim.keymap.set('n', '<leader>bf', vim.lsp.buf.hover , {buffer=arg.buf})
+vim.keymap.set('n', '<leader>s', vim.lsp.buf.hover , {buffer=arg.buf})
+vim.keymap.set('n','<leader>rn',vim.lsp.buf.rename,{})
+vim.keymap.set('n','gd',vim.lsp.buf.definition,{})
+vim.keymap.set('n','gi',vim.lsp.buf.implementation,{})
+vim.keymap.set('n','gr',require('telescope.builtin').lsp_references,{})
+
 

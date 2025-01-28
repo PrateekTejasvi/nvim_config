@@ -1,4 +1,8 @@
 local M  = {}
+local ignore_filetypes_list = {
+    "venv", "__pycache__", "%.xlsx", "%.jpg", "%.png", "%.webp",
+    "%.pdf", "%.odt", "%.ico",
+}
 M.search_config = function()
     require("telescope.builtin").find_files({
         prompt_title = "CONFIG",
@@ -12,6 +16,7 @@ M.search_programs = function()
     require("telescope.builtin").find_files({
         prompt_title = "<Local Programs>",
         cwd = "~/programs",
+        file_ignore_patterns = ignore_filetypes_list
         })
 end
 M.search_dotfiles = function()
