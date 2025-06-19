@@ -47,7 +47,7 @@ Plug 'hrsh7th/nvim-cmp'
 Plug "sbdchd/neoformat"
 vim.call('plug#end')
 vim.cmd[[ 
-    colorscheme tokyonight-moon
+    colorscheme material-darker 
 ]]
 
 
