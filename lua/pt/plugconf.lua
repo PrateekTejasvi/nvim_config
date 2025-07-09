@@ -34,7 +34,7 @@ Plug 'VonHeikemen/lsp-zero.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'L3MON4D3/LuaSnip'
+Plug ('L3MON4D3/LuaSnip', {['tag'] =  'v2.*', ['do'] = 'make install_jsregexp'})
 Plug 'rafamadriz/friendly-snippets'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug ('dsznajder/vscode-es7-javascript-react-snippets', { ['do'] = 'yarn install --frozen-lockfile && yarn compile' })
@@ -47,7 +47,7 @@ Plug 'hrsh7th/nvim-cmp'
 Plug "sbdchd/neoformat"
 vim.call('plug#end')
 vim.cmd[[ 
-    colorscheme material-darker 
+    colorscheme tokyonight-moon
 ]]
 
 
