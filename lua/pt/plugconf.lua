@@ -14,6 +14,7 @@ Plug 'loctvl842/monokai-pro.nvim'
 Plug ('folke/tokyonight.nvim', {[ 'branch']= 'main' })
 Plug 'marko-cerovac/material.nvim'
 Plug 'projekt0n/github-nvim-theme'
+Plug 'sainnhe/everforest'
 -- Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'folke/lsp-colors.nvim'
@@ -47,7 +48,7 @@ Plug 'hrsh7th/nvim-cmp'
 Plug "sbdchd/neoformat"
 vim.call('plug#end')
 vim.cmd[[ 
-    colorscheme tokyonight-moon
+    colorscheme everforest
 ]]
 
 

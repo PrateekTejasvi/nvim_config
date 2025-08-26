@@ -25,3 +25,5 @@ nnoremap<silent><leader><S-tab> <cmd>BufferLineCyclePrev<CR>
 nnoremap <leader>o :TermExec cmd="arduino-cli compile --fqbn arduino:avr:nano:cpu=atmega328old"<CR>
 nnoremap <leader>u :TermExec cmd="arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:nano:cpu=atmega328old"<CR>
 
+nnoremap <leader>v :TermExec cmd="arduino-cli compile --fqbn esp32:esp32:esp32"<CR>
+nnoremap <leader>s :TermExec cmd="arduino-cli upload -p /dev/ttyUSB0 --fqbn esp32:esp32:esp32"<CR>
