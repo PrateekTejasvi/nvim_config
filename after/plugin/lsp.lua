@@ -3,17 +3,6 @@ lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
-require("mason-lspconfig").setup_handlers({
-function(server_name) -- default handler (optional)
-    if server_name == "tsserver" then
-        server_name = "ts_ls"
-    end
-    local capabilities = require("cmp_nvim_lsp").default_capabilities()
-    require("lspconfig")[server_name].setup({
-    capabilities = capabilities,
-})
-end,
-})
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
@@ -46,4 +35,16 @@ vim.keymap.set('n','gd',vim.lsp.buf.definition,{})
 vim.keymap.set('n','gi',vim.lsp.buf.implementation,{})
 vim.keymap.set('n','gr',require('telescope.builtin').lsp_references,{})
 
+
+local ls = require("luasnip")
+
+vim.keymap.set({"i"}, "<C-K>", function() ls.expand() end, {silent = true})
+vim.keymap.set({"i", "s"}, "<C-L>", function() ls.jump( 1) end, {silent = true})
+vim.keymap.set({"i", "s"}, "<C-J>", function() ls.jump(-1) end, {silent = true})
+
+vim.keymap.set({"i", "s"}, "<C-E>", function()
+	if ls.choice_active() then
+		ls.change_choice(1)
+	end
+end, {silent = true})
 
